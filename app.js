@@ -7,16 +7,15 @@
 var http = require('http');
 var fs= require('fs');
 const { url } = require('inspector');
-var routeelektronik = require('./elektronikcontroller')
+var routeelektronik = require('./app_server/routes/elektronikrouter')
 
 
 var express = require('express');
 const path = require('path');
-const elektronikcontroller = require('./elektronikcontroller');
 var app = express()
 app.use('/public',express.static(path.join(__dirname,'public')));
 
 
-app.use('/', routeelektronik)
+app.use('/elektronik', routeelektronik)
 
 app.listen(3000);
