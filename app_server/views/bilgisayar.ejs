@@ -1,18 +1,7 @@
-<html>
-    <body>
-        <h1>
-            EJS START Elektronik Bilgisayar sayfasi
-        </h1>
-        <h2>
-            <%= mesaj %>
-
-        </h2>
-
-        <h2>
+<h2><%=mesaj%></h2>
+        <ul class="DenemeBuyuk">
             <% for(var i=0;i<adlar.length;i++){%>
                 <li><%= adlar[i]%></li>
                 <%}%>
 
-        </h2>
-    </body>
-</html>
+        </ul>

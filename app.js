@@ -2,7 +2,7 @@
 // npm install -g nodemon 
 // nodemon app.js ile açarsak yaptığımız değişiklikler anında web sitesine yansır.
 // npm remove modüladı  --> modülü siler
-
+// express-ejs-layouts --save  ejs modülündeki sayfa şablonlarını içerir
 
 var http = require('http');
 var fs= require('fs');
@@ -14,8 +14,12 @@ var express = require('express');
 const path = require('path');
 var app = express()
 
+var ejslayout = require('express-ejs-layouts')
+
 app.set('view engine','ejs')
 app.set('views',path.join(__dirname,'./app_server/views'))
+
+app.use(ejslayout);
 
 app.use('/public',express.static(path.join(__dirname,'public')));
 
