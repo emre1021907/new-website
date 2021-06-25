@@ -3,8 +3,9 @@ const path = require('path');
 
 
 module.exports.index = function(req,res){
-    console.log(req.deneme)
-    res.sendFile(path.join(__dirname,'../../index.html'));
+        
+    var kisiler = ['ahmet','mehmet','ali','veli']
+    res.render('bilgisayar',{mesaj:"merhaba ben controller",adlar : kisiler})
 };
 
 module.exports.bilgisayar = function(req,res){

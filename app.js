@@ -13,6 +13,10 @@ var routeelektronik = require('./app_server/routes/elektronikrouter')
 var express = require('express');
 const path = require('path');
 var app = express()
+
+app.set('view engine','ejs')
+app.set('views',path.join(__dirname,'./app_server/views'))
+
 app.use('/public',express.static(path.join(__dirname,'public')));
 
 app.use(function(req,res,next){
@@ -20,6 +24,7 @@ app.use(function(req,res,next){
     console.log("timee"+ Date.now());
     next(); // next yapmazsam response dönmeyeceğim için burada tıkanacak
 }) // next() fonksiyonundan sonra bir sonrakine middlewareye devam eder.
+
 app.use('/elektronik', routeelektronik) // bunun sonunda response html döndüğü için sayfayı sonuç olarak vericek
 
 app.listen(3000);
