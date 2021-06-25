@@ -1,7 +1,20 @@
 <h2><%=mesaj%></h2>
         <ul class="DenemeBuyuk">
-            <% for(var i=0;i<adlar.length;i++){%>
-                <li><%= adlar[i]%></li>
-                <%}%>
+
 
         </ul>
+
+    
+<div class="container">
+    <div class="row ">
+        <% for(var i=0;i<adlar.length;i++){%>
+            
+            <div class="col-sm-3 DenemeBuyuk">
+                <%= adlar[i]%>
+            </div>
+            <%}%>
+        
+        Merhabalar
+
+    </div>
+</div>

@@ -3,6 +3,9 @@
 // nodemon app.js ile açarsak yaptığımız değişiklikler anında web sitesine yansır.
 // npm remove modüladı  --> modülü siler
 // express-ejs-layouts --save  ejs modülündeki sayfa şablonlarını içerir
+// bootstrap'in kullanılma nedeni sayfa boyutuna göre web sayfası otomatik ölçekleniyor. Sayfa boyutuna göre adapte olur
+
+
 
 var http = require('http');
 var fs= require('fs');
