@@ -3,8 +3,18 @@ const path = require('path');
 
 
 module.exports.index = function(req,res) {
-    res.render('elektronik')
+    res.render('login')
 }
+
+module.exports.indexpost = function(req,res) {
+    console.log(req.body)
+    res.render('login',  {
+        email : req.body.email,
+        password : req.body.password
+    });
+ 
+}
+
 
 module.exports.bilgisayar = function(req,res){
         

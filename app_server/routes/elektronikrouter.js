@@ -10,6 +10,7 @@ router.use(function(req,res,next){
 })
 
 router.get('/',controller.index);
+router.post('/',controller.indexpost);
 router.get('/bilgisayar',controller.bilgisayar);
 
 module.exports = router;
